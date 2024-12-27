@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Smart Parking Status</h1>
+    <p>Status: <span id="status">Loading...</span></p>
+
+    <script>
+        async function fetchStatus() {
+            try {
+                const response = await fetch('/status');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch status');
+                }
+                const data = await response.json();
+                const statusElement = document.getElementById('status');
+
+                // نمایش وضعیت
+                if (data.status === "1") { // If status is 1 (occupied)
+                    // Load the first HTML structure
+                    const firstHtml = `
+                    
+                        <div class="container">
+                            <div class="status-icon">
+                                <div class="check-circle">
+                                    <p class="check-circle">❌</p> 
+                                </div>
+                            </div>
+                            <h1 class="status-message">The parking lot is full</h1>
+                            <div class="info-box">
+                                <p>The parking lot is currently full. Please try again later.</p>
+                            </div>
+                            <button onclick="fetchStatus()" class="confirmation-btn">Update</button>
+                            <footer>
+                                <a href="index3.html" class="home-icon">🏠</a>
+                            </footer>
+                        </div>
+                    `;
+                    document.body.innerHTML = firstHtml;
+                    // Apply the CSS from the first HTML
+                    const style = document.createElement('style');
+                    style.innerHTML = `
+                        /* ... your CSS from the first HTML ... */ 
+                    `;
+                    document.head.appendChild(style);
+                } else if (data.status === "0") { // If status is 0 (empty)
+                    // Load the second HTML structure
+                    const secondHtml = `
+                        <div class="container1">
+                            <div class="status-icon1">
+                                <div class="check-circle1">
+                                    <p class="check-circle1">✅</p> 
+                                </div>
+                            </div>
+                            <h1 class="status-message1">The parking lot is empty</h1>
+                            <div class="info-box1">
+                                <p>The desired parking place is without cars. Please observe the following:</p>
+                                <ol>
+                                    <li>Make sure to lock your car.</li>
+                                    <li>Parking has no responsibility for your valuables.</li>
+                                </ol>
+                                <p>Good day - good luck</p>
+                            </div>
+                            <button onclick="fetchStatus()" class="confirmation-btn1">Update</button>
+                            <footer>
+                                <a href="index3.html" class="home-icon1">🏠</a>
+                            </footer>
+                        </div>
+                    `;
+                    document.body.innerHTML = secondHtml;
+                    // Apply the CSS from the first HTML
+                    const style = document.createElement('style');
+                    style.innerHTML = `
+                        /* ... your CSS from the first HTML ... */ 
+                    `;
+                    document.head.appendChild(style);
+                } else {
+                    statusElement.textContent = "Unknown";
+                    statusElement.classList.remove('busy');
+                }
+            } catch (error) {
+                console.error("Error fetching status:", error);
+                document.getElementById('status').textContent = "Error fetching status";
+            }
+        }
+
+        // فراخوانی تابع هر 2 ثانیه یک‌بار
+        setInterval(fetchStatus, 2000);
+
+        // بارگیری اولیه
+        fetchStatus();
+    </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #050daf, #094bb5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    background-color: #f0f8ff;
+    border-radius: 20px;
+    padding: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #003366;
+}
+
+/* Status Icon */
+.status-icon {
+    margin-bottom: 1em;
+}
+.check-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #2B0001;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+}
+.check-mark {
+    font-size: 20em;
+    color: #00ffcc;
+}
+
+/* Status Message */
+.status-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    background-color: #D40004;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+}
+
+/* Info Box */
+.info-box {
+    background-color:  #7B0507;
+    color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.info-box:hover {
+    background-color: rgb(41, 1, 1);
+    box-shadow: 200 2px 8px rgba(0, 0, 0, 0.1);
+
+    transition: box-shadow 3s ease;
+    transition: background-color 0.3s ease;
+
+}
+.info-box ol {
+    margin-left: 1.2em;
+}
+
+/* Confirmation Button */
+.confirmation-btn {
+    background-color: #7B0507;
+    color: white;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 1em;
+    transition: background-color 0.3s ease;
+}
+.confirmation-btn:hover {
+    background-color: #ff0000;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 1em;
+    transition: background-color 0.3s ease;
+
+}
+
+/* Footer */
+footer {
+    margin-top: 1em;
+}
+.home-icon {
+    font-size: 2em;
+    text-decoration: none;
+    color: #0057e7;
+    background-color: #ff0000;
+    padding: 0.5em;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+.home-icon:hover {
+    background-color: #7B0507;
+        transition: background-color 0.5s ease;
+
+}
+
+.checkpoint {
+    size: 122px;
+}
+
+    
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    #status {
+        font-size: 24px;
+        color: green;
+    }
+
+    .busy {
+        color: red;
+    }
+
+    .container1 {
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+        background-color: #f0f8ff;
+        border-radius: 20px;
+        padding: 1.5em;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        color: #003366;
+    }
+    
+    /* Status Icon */
+    .status-icon1 {
+        margin-bottom: 1em;
+    }
+    .check-circle1 {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        background-color: #001e5a;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7em;
+    }
+    .check-mark1 {
+        font-size: 2em;
+        color: #00ffcc;
+    }
+    
+    /* Status Message */
+    .status-message1 {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 1em;
+        background-color: #0057e7;
+        color: white;
+        padding: 0.5em 1em;
+        border-radius: 10px;
+    }
+    
+    /* Info Box */
+    .info-box1 {
+        background-color: white;
+        color: #003366;
+        padding: 1em;
+        border-radius: 10px;
+        margin-bottom: 1em;
+        text-align: left;
+        font-size: 0.9em;
+        line-height: 1.5;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .info-box1:hover {
+        background-color: rgb(0, 14, 61);
+        box-shadow: 200 2px 8px rgba(0, 0, 0, 0.1);
+        color: white;
+        transition: color 30s ease;
+        transition: background-color 0.3s ease;
+    
+    }
+    .info-box1 ol {
+        margin-left: 1.2em;
+    }
+    
+    /* Confirmation Button */
+    .confirmation-btn1 {
+        background-color: #0057e7;
+        color: white;
+        border: none;
+        padding: 0.7em 1.5em;
+        border-radius: 10px;
+        font-size: 1em;
+        cursor: pointer;
+        font-weight: bold;
+        margin-bottom: 1em;
+        transition: background-color 0.3s ease;
+    }
+    .confirmation-btn1:hover {
+        background-color: #003bb3;
+    }
+    
+    /* Footer */
+    footer {
+        margin-top: 1em;
+    }
+    .home-icon1 {
+        font-size: 2em;
+        text-decoration: none;
+        color: #0057e7;
+        background-color: #0057e7;
+        padding: 0.5em;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+    }
+    .home-icon1:hover {
+        background-color: #003bb3;
+    }
+    
+    .checkpoint1 {
+        size: 50%;
+    }
